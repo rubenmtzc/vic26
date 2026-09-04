@@ -177,41 +177,7 @@
     span[data-lang]{display:none}
     body.lang-es span[data-lang="es"], body.lang-en span[data-lang="en"]{display:inline}
 
-    .hero-media.hero-portraits{
-      min-height:0;
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:14px;
-      padding:14px;
-      background:var(--surface);
-    }
-    .hero-portrait{
-      min-width:0;
-      overflow:hidden;
-      border-radius:12px;
-      background:#e4e7e3;
-      position:relative;
-    }
-    .hero-portrait img{
-      width:100%;
-      height:min(58vw,560px);
-      min-height:360px;
-      object-fit:cover;
-      object-position:center 24%;
-      display:block;
-    }
-    .hero-portrait figcaption{
-      position:absolute;
-      left:14px;
-      right:14px;
-      bottom:14px;
-      margin:0;
-      padding:9px 12px;
-      border-radius:10px;
-      background:rgba(24,32,29,.82);
-      color:#fff;
-      backdrop-filter:blur(5px);
-    }
+   
     .profile-photo{
       aspect-ratio:4/5;
       object-position:center 22%;
@@ -242,8 +208,6 @@
       .profile-pair{grid-template-columns:1fr}
       .hero{padding-top:48px}
       .hero-media{min-height:300px}
-      .hero-media.hero-portraits{grid-template-columns:1fr;min-height:0}
-      .hero-portrait img{height:min(118vw,640px);min-height:0}
       .wrap{width:min(var(--max),calc(100% - 28px))}
     }
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -297,29 +261,7 @@
         <a href="#video" data-lang="en">Video</a>
       </nav>
 
-      <div class="hero-media hero-portraits">
-        <figure class="hero-portrait">
-          <img
-            src="assets/week-01/rosa-maria-leonardo.jpeg"
-            alt="Rosa María Leonardo, estudiante investigadora del VIC 2026."
-            loading="eager"
-            fetchpriority="high">
-          <figcaption>
-            <span data-lang="es">Rosa María Leonardo · estudiante investigadora</span>
-            <span data-lang="en">Rosa María Leonardo · student researcher</span>
-          </figcaption>
-        </figure>
-        <figure class="hero-portrait">
-          <img
-            src="assets/week-01/mariana-chavana.jpeg"
-            alt="María Ana Chavana Villalobos, Mariana, mentora del VIC 2026, durante una visita a una abadía histórica."
-            loading="eager">
-          <figcaption>
-            <span data-lang="es">María Ana Chavana Villalobos (Mariana) · mentora</span>
-            <span data-lang="en">María Ana Chavana Villalobos (Mariana) · mentor</span>
-          </figcaption>
-        </figure>
-      </div>
+
     </div>
   </section>
 
