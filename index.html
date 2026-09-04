@@ -127,6 +127,34 @@
       font-size:clamp(1.25rem,2.5vw,1.8rem); line-height:1.35; border-radius:0 var(--radius) var(--radius) 0;
     }
     .pullquote cite{display:block; font-size:.88rem; font-style:normal; margin-top:14px; color:var(--muted)}
+    .reflection-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:clamp(24px,4vw,38px);
+    }
+    .reflection-card blockquote{
+      margin:0;
+      padding:0;
+      border:0;
+    }
+    .reflection-card p{
+      font-size:1.08rem;
+      line-height:1.75;
+    }
+    .reflection-card p:last-of-type{
+      margin-bottom:0;
+    }
+    .reflection-signature{
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .reflection-signature strong{
+      color:var(--ink);
+    }
     .milestones{display:grid; gap:14px; counter-reset:step}
     .milestone{
       counter-increment:step; display:grid; grid-template-columns:56px 1fr; gap:18px;
@@ -159,6 +187,35 @@
     .cta{
       display:flex; align-items:center; justify-content:space-between; gap:22px; flex-wrap:wrap;
       padding:36px; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    }
+    .checkpoint-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:clamp(28px,5vw,48px);
+    }
+    .checkpoint-card h2{
+      margin:.12em 0 .55em;
+    }
+    .checkpoint-copy{
+      max-width:900px;
+      font-size:1.08rem;
+    }
+    .checkpoint-copy p{
+      margin-bottom:1.15em;
+    }
+    .checkpoint-list{
+      margin:18px 0 26px;
+      padding-left:1.6rem;
+    }
+    .checkpoint-list li{
+      margin:.65rem 0;
+      padding-left:.2rem;
+    }
+    .checkpoint-actions{
+      margin-top:28px;
+      padding-top:22px;
+      border-top:1px solid var(--line);
     }
     .social-links{
       display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;
@@ -255,10 +312,13 @@
       <nav class="report-links" aria-label="Report sections">
         <a href="#experiencia-estudiante" data-lang="es">Estudiante y mentora</a>
         <a href="#student-experience" data-lang="en">Student and mentor</a>
+        <a href="#reflexion-rosa-maria" data-lang="es">Reflexión de Rosa María</a>
+        <a href="#rosa-maria-reflection" data-lang="en">Rosa María's reflection</a>
         <a href="#ruta-investigacion" data-lang="es">Ruta de investigación</a>
         <a href="#research-pathway" data-lang="en">Research pathway</a>
         <a href="#video" data-lang="es">Vídeo</a>
         <a href="#video" data-lang="en">Video</a>
+        <a href="#checkpoint-1">Checkpoint 1</a>
       </nav>
 
 
@@ -324,6 +384,50 @@
           Villalobos (Mariana), a VIC 2026 mentor. Their profiles frame this week's reflection on planning,
           mentoring and the construction of a workable research pathway.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reflexion-rosa-maria">
+    <span id="rosa-maria-reflection" aria-hidden="true"></span>
+    <div class="wrap section-grid">
+      <div>
+        <div class="eyebrow" data-lang="es">En primera persona</div>
+        <div class="eyebrow" data-lang="en">In her own words</div>
+        <h2 data-lang="es">Reflexión de Rosa María</h2>
+        <h2 data-lang="en">Rosa María's reflection</h2>
+      </div>
+
+      <div class="reflection-card">
+        <blockquote data-lang="es">
+          <p>Hola, buenos días. Mi nombre es Rosa María Leonardo.</p>
+
+          <p>Me da muchísimo gusto y agradezco profundamente la oportunidad de haber sido aceptada en el Verano Internacional de la Ciencia 2026. Formar parte de este programa representa una experiencia inestimable para mi desarrollo académico y profesional.</p>
+
+          <p>Mis primeras impresiones son verdaderamente excelentes; me llena de entusiasmo integrarme a un espacio donde se impulsa el rigor científico, el intercambio cultural y el aprendizaje colaborativo.</p>
+
+          <p>Esta primera semana de trabajo ha sido sumamente provechosa. La reunión que hemos sostenido con mi mentora nos ha permitido establecer un rumbo claro, definir objetivos sólidos y comenzar a estructurar las actividades de investigación con paso firme.</p>
+
+          <p>Estoy muy emocionada por todo lo que compartiremos y aprenderemos a lo largo de este proceso, y tengo la certeza de que esta estancia será un periodo de gran crecimiento y aportaciones significativas.</p>
+        </blockquote>
+
+        <blockquote data-lang="en">
+          <p>Hello, good morning. My name is Rosa María Leonardo.</p>
+
+          <p>I am delighted and deeply grateful for the opportunity to have been accepted into the Verano Internacional de la Ciencia 2026. Being part of this programme represents an invaluable experience for my academic and professional development.</p>
+
+          <p>My first impressions have been truly excellent. I am very enthusiastic about joining a space that promotes scientific rigour, cultural exchange and collaborative learning.</p>
+
+          <p>This first week of work has been extremely productive. The meeting I have had with my mentor has allowed us to establish a clear direction, define solid objectives and begin structuring the research activities on a firm footing.</p>
+
+          <p>I am very excited about everything we will share and learn throughout this process, and I am certain that this placement will be a period of significant growth and meaningful contributions.</p>
+        </blockquote>
+
+        <div class="reflection-signature">
+          <strong>Rosa María Leonardo</strong><br>
+          <span data-lang="es">Estudiante investigadora · VIC 2026</span>
+          <span data-lang="en">Student researcher · VIC 2026</span>
+        </div>
       </div>
     </div>
   </section>
@@ -601,18 +705,72 @@
     </div>
   </section>
 
-  <section>
+  <section id="checkpoint-1">
     <div class="wrap">
-      <div class="cta">
-        <div>
-          <div class="eyebrow">VIC 2026</div>
-          <h2 data-lang="es">Semana 01</h2>
-          <h2 data-lang="en">Week 01</h2>
-          <p data-lang="es" style="margin-bottom:0">Del tiempo limitado a una ruta de investigación viable.</p>
-          <p data-lang="en" style="margin-bottom:0">From limited time to a workable research pathway.</p>
+      <div class="checkpoint-card">
+        <div class="eyebrow">VIC 2026</div>
+        <h2>Checkpoint 1</h2>
+
+        <div class="checkpoint-copy" data-lang="es">
+          <p>
+            Hola a todas y todos. Estamos muy contentos por el arranque de la edición 2026 del
+            Verano Internacional de la Ciencia. Tenemos proyectos muy interesantes y excelentes
+            estudiantes que han empezado a trabajar en sus proyectos con mucho entusiasmo, con la
+            colaboración de mentoras y mentores que participan con una vocación y energía admirables.
+          </p>
+
+          <p>En esta primera etapa contemplamos que las siguientes áreas deben haberse abordado:</p>
+
+          <ol class="checkpoint-list">
+            <li>Trabajar la pregunta de investigación y redefinirla si es necesario.</li>
+            <li>Discutir el método de investigación que se utilizará para el proyecto.</li>
+            <li>Definir qué metodologías son relevantes para la recolección de información.</li>
+          </ol>
+
+          <p>
+            Cada proyecto empieza de manera distinta, avanza a diferentes velocidades y pasa por
+            ciclos distintos en diferentes etapas, pero el objetivo principal y la fecha de conclusión
+            no cambian.
+          </p>
+
+          <p>
+            Recuerden que estamos disponibles a través de los medios de comunicación que les hemos
+            compartido para cualquier comentario o pregunta.
+          </p>
         </div>
-        <a class="button primary" href="#content" data-lang="es">Volver al inicio</a>
-        <a class="button primary" href="#content" data-lang="en">Back to top</a>
+
+        <div class="checkpoint-copy" data-lang="en">
+          <p>
+            Hello everyone. We are very pleased with the start of the 2026 edition of the
+            Verano Internacional de la Ciencia. We have very interesting projects and excellent
+            students who have begun working on them with great enthusiasm, supported by mentors
+            whose commitment and energy are admirable.
+          </p>
+
+          <p>At this first stage, we expect the following areas to have been addressed:</p>
+
+          <ol class="checkpoint-list">
+            <li>Work on the research question and redefine it if necessary.</li>
+            <li>Discuss the research method that will be used for the project.</li>
+            <li>Define which methodologies are relevant for collecting information.</li>
+          </ol>
+
+          <p>
+            Every project starts from a different point, progresses at a different pace and moves
+            through different cycles at different stages, but the main objective and the completion
+            date do not change.
+          </p>
+
+          <p>
+            Please remember that we are available through the communication channels we have shared
+            with you for any comments or questions.
+          </p>
+        </div>
+
+        <div class="checkpoint-actions">
+          <a class="button primary" href="#content" data-lang="es">Volver al inicio</a>
+          <a class="button primary" href="#content" data-lang="en">Back to top</a>
+        </div>
       </div>
     </div>
   </section>
