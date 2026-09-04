@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VIC 2026 · Semana 01 | Del tiempo limitado a una ruta de investigación viable</title>
+  <meta name="description" content="Informe semanal del Verano Internacional de la Ciencia 2026: cómo una mentoría estructurada puede ayudar a convertir diez sesiones en una ruta viable hacia un póster académico.">
+  <meta property="og:title" content="VIC 2026 · Semana 01">
+  <meta property="og:description" content="Del tiempo limitado a una ruta de investigación viable: estructura, andamiaje y cinco momentos para acompañar el trabajo de investigación.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="assets/week-01/rosa-maria-leonardo.jpeg">
+  <meta name="theme-color" content="#f6f3ec">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    :root{
+      --bg:#f6f3ec;
+      --surface:#ffffff;
+      --ink:#18201d;
+      --muted:#5e6863;
+      --line:#d8ddd8;
+      --accent:#7b2f3a;
+      --accent-2:#284f46;
+      --max:1160px;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.65;
+    }
+    a{color:inherit}
+    img,video,iframe{max-width:100%}
+    .wrap{width:min(var(--max), calc(100% - 40px)); margin-inline:auto}
+    .skip{
+      position:absolute; left:-9999px; top:auto;
+    }
+    .skip:focus{
+      left:16px; top:16px; z-index:1000;
+      background:var(--surface); padding:10px 14px; border:2px solid var(--ink);
+    }
+    header{
+      border-bottom:1px solid var(--line);
+      background:rgba(246,243,236,.96);
+      position:sticky; top:0; z-index:20;
+      backdrop-filter:blur(8px);
+    }
+    .nav{
+      min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:18px;
+    }
+    .brand{
+      font-weight:800; letter-spacing:.04em; text-decoration:none;
+    }
+    .nav-actions{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+    button,.button{
+      font:inherit; border:1px solid var(--ink); background:transparent; color:var(--ink);
+      border-radius:999px; padding:8px 14px; cursor:pointer; text-decoration:none; display:inline-block;
+    }
+    button[aria-pressed="true"], .button.primary{
+      background:var(--ink); color:white;
+    }
+    .hero{padding:72px 0 48px}
+    .eyebrow{
+      text-transform:uppercase; letter-spacing:.12em; font-weight:800; font-size:.82rem;
+      color:var(--accent);
+    }
+    h1{
+      font-size:clamp(2.6rem,7vw,6rem); line-height:.96; letter-spacing:-.05em;
+      max-width:980px; margin:.18em 0 .32em;
+    }
+    .dek{font-size:clamp(1.1rem,2vw,1.45rem); max-width:800px; color:var(--muted)}
+    .meta{display:flex; gap:18px; flex-wrap:wrap; margin-top:28px; color:var(--muted); font-size:.95rem}
+    .report-links{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:28px;
+    }
+    .report-links a{
+      text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:2px;
+      font-weight:700; color:var(--accent-2);
+    }
+    .student-experience{
+      background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:28px;
+    }
+    .student-experience .student-meta{
+      color:var(--muted); font-size:.92rem; margin-bottom:18px;
+    }
+    .profile-pair{
+      display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:24px 0 30px;
+    }
+    .profile-card{
+      margin:0; background:var(--bg); border:1px solid var(--line); border-radius:var(--radius);
+      overflow:hidden;
+    }
+    .profile-photo{
+      width:100%; aspect-ratio:4/3; object-fit:cover; display:block; background:#e4e7e3;
+    }
+    .profile-photo-placeholder{
+      aspect-ratio:4/3; display:grid; place-items:center; padding:24px; text-align:center;
+      color:var(--muted); background:linear-gradient(135deg,#e1e4df,#f0ede6);
+    }
+    .profile-copy{padding:18px}
+    .profile-role{
+      text-transform:uppercase; letter-spacing:.08em; font-size:.75rem; font-weight:800;
+      color:var(--accent); margin-bottom:4px;
+    }
+    .profile-name{font-size:1.15rem; font-weight:800; margin:0 0 4px}
+    .profile-copy p:last-child{margin-bottom:0}
+    .hero-media{
+      margin-top:44px; min-height:420px; border-radius:var(--radius); overflow:hidden;
+      background:linear-gradient(135deg,#d9ddd8,#ece8df);
+      display:grid; place-items:center; border:1px solid var(--line);
+    }
+    .placeholder{padding:28px; text-align:center; color:var(--muted); max-width:620px}
+    main section{padding:54px 0; border-top:1px solid var(--line)}
+    .section-grid{display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.8fr); gap:44px}
+    h2{font-size:clamp(1.8rem,4vw,3rem); line-height:1.05; letter-spacing:-.035em; margin:0}
+    h3{font-size:1.25rem; line-height:1.25; margin:0 0 8px}
+    p{margin-top:0}
+    .lead{font-size:1.2rem}
+    .pullquote{
+      margin:34px 0; padding:26px 28px; background:var(--surface); border-left:6px solid var(--accent);
+      font-size:clamp(1.25rem,2.5vw,1.8rem); line-height:1.35; border-radius:0 var(--radius) var(--radius) 0;
+    }
+    .pullquote cite{display:block; font-size:.88rem; font-style:normal; margin-top:14px; color:var(--muted)}
+    .milestones{display:grid; gap:14px; counter-reset:step}
+    .milestone{
+      counter-increment:step; display:grid; grid-template-columns:56px 1fr; gap:18px;
+      background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:22px;
+    }
+    .milestone::before{
+      content:counter(step, decimal-leading-zero); font-weight:800; color:var(--accent); font-size:1.15rem;
+    }
+    .milestone p{margin-bottom:0;color:var(--muted)}
+    .media-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px}
+    figure{margin:0}
+    .photo-slot{
+      aspect-ratio:4/3; border:1px dashed #909a95; border-radius:var(--radius);
+      display:grid; place-items:center; background:rgba(255,255,255,.45); padding:18px; text-align:center; color:var(--muted)
+    }
+    figcaption{font-size:.88rem; color:var(--muted); margin-top:8px}
+    .video-card{
+      margin-top:22px; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:18px;
+    }
+    .video-frame{position:relative; aspect-ratio:16/9; overflow:hidden; border-radius:12px; background:#111}
+    .video-frame iframe,.video-frame video{width:100%;height:100%;border:0;display:block}
+    .organisers{
+      background:var(--accent-2); color:#fff; border-radius:var(--radius); padding:34px;
+    }
+    .organisers p:last-child{margin-bottom:0}
+    .next{
+      display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px;
+    }
+    .next article{background:var(--surface); padding:22px; border-radius:var(--radius); border:1px solid var(--line)}
+    .cta{
+      display:flex; align-items:center; justify-content:space-between; gap:22px; flex-wrap:wrap;
+      padding:36px; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    }
+    .social-links{
+      display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;
+    }
+    .social-link{
+      display:inline-flex; align-items:center; gap:9px;
+      padding:11px 16px; border-radius:999px; text-decoration:none;
+      border:1px solid var(--ink); background:var(--surface); font-weight:700;
+    }
+    .social-link:hover,.social-link:focus-visible{
+      background:var(--ink); color:#fff;
+    }
+    footer{padding:42px 0 60px; color:var(--muted); font-size:.9rem}
+    [data-lang]{display:none}
+    body.lang-es [data-lang="es"], body.lang-en [data-lang="en"]{display:block}
+    span[data-lang]{display:none}
+    body.lang-es span[data-lang="es"], body.lang-en span[data-lang="en"]{display:inline}
+
+    .hero-media.hero-portraits{
+      min-height:0;
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      padding:14px;
+      background:var(--surface);
+    }
+    .hero-portrait{
+      min-width:0;
+      overflow:hidden;
+      border-radius:12px;
+      background:#e4e7e3;
+      position:relative;
+    }
+    .hero-portrait img{
+      width:100%;
+      height:min(58vw,560px);
+      min-height:360px;
+      object-fit:cover;
+      object-position:center 24%;
+      display:block;
+    }
+    .hero-portrait figcaption{
+      position:absolute;
+      left:14px;
+      right:14px;
+      bottom:14px;
+      margin:0;
+      padding:9px 12px;
+      border-radius:10px;
+      background:rgba(24,32,29,.82);
+      color:#fff;
+      backdrop-filter:blur(5px);
+    }
+    .profile-photo{
+      aspect-ratio:4/5;
+      object-position:center 22%;
+    }
+    .video-frame.portrait{
+      aspect-ratio:9/16;
+      width:min(100%,430px);
+      margin-inline:auto;
+    }
+    .video-frame.portrait video{
+      object-fit:contain;
+      background:#111;
+    }
+    .media-note{
+      margin:12px 0 0;
+      color:var(--muted);
+      text-align:center;
+      font-size:.92rem;
+    }
+    a:focus-visible,button:focus-visible{
+      outline:3px solid var(--accent);
+      outline-offset:3px;
+    }
+
+    @media (max-width:800px){
+      .section-grid{grid-template-columns:1fr}
+      .media-grid,.next{grid-template-columns:1fr}
+      .profile-pair{grid-template-columns:1fr}
+      .hero{padding-top:48px}
+      .hero-media{min-height:300px}
+      .hero-media.hero-portraits{grid-template-columns:1fr;min-height:0}
+      .hero-portrait img{height:min(118vw,640px);min-height:0}
+      .wrap{width:min(var(--max),calc(100% - 28px))}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+
+<body class="lang-es">
+<a class="skip" href="#content">Saltar al contenido / Skip to content</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#content">VIC 2026</a>
+    <div class="nav-actions" aria-label="Language and report actions">
+      <button id="esBtn" type="button" aria-pressed="true">ES</button>
+      <button id="enBtn" type="button" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="content">
+  <section class="hero" style="border-top:0">
+    <div class="wrap">
+      <div class="eyebrow" data-lang="es">Informe semanal · Semana 01</div>
+      <div class="eyebrow" data-lang="en">Weekly report · Week 01</div>
+
+      <h1 data-lang="es">Del tiempo limitado a una ruta de investigación viable</h1>
+      <h1 data-lang="en">From limited time to a workable research pathway</h1>
+
+      <p class="dek" data-lang="es">
+        Una reflexión desde la mentoría sobre cómo convertir diez sesiones en una secuencia clara de decisiones,
+        avances y productos, sin perder de vista las circunstancias de cada estudiante.
+      </p>
+      <p class="dek" data-lang="en">
+        A mentoring perspective on turning ten sessions into a clear sequence of decisions, progress and outputs,
+        while remaining attentive to each student's circumstances.
+      </p>
+
+      <div class="meta">
+        <span data-lang="es">VIC 2026 · Verano Internacional de la Ciencia</span>
+        <span data-lang="en">VIC 2026 · Verano Internacional de la Ciencia</span>
+        <span data-lang="es">REDNACECYT · EAAMO</span>
+        <span data-lang="en">REDNACECYT · EAAMO</span>
+      </div>
+
+      <nav class="report-links" aria-label="Report sections">
+        <a href="#experiencia-estudiante" data-lang="es">Estudiante y mentora</a>
+        <a href="#student-experience" data-lang="en">Student and mentor</a>
+        <a href="#ruta-investigacion" data-lang="es">Ruta de investigación</a>
+        <a href="#research-pathway" data-lang="en">Research pathway</a>
+        <a href="#video" data-lang="es">Vídeo</a>
+        <a href="#video" data-lang="en">Video</a>
+      </nav>
+
+      <div class="hero-media hero-portraits">
+        <figure class="hero-portrait">
+          <img
+            src="assets/week-01/rosa-maria-leonardo.jpeg"
+            alt="Rosa María Leonardo, estudiante investigadora del VIC 2026."
+            loading="eager"
+            fetchpriority="high">
+          <figcaption>
+            <span data-lang="es">Rosa María Leonardo · estudiante investigadora</span>
+            <span data-lang="en">Rosa María Leonardo · student researcher</span>
+          </figcaption>
+        </figure>
+        <figure class="hero-portrait">
+          <img
+            src="assets/week-01/mariana-chavana.jpeg"
+            alt="María Ana Chavana Villalobos, Mariana, mentora del VIC 2026, durante una visita a una abadía histórica."
+            loading="eager">
+          <figcaption>
+            <span data-lang="es">María Ana Chavana Villalobos (Mariana) · mentora</span>
+            <span data-lang="en">María Ana Chavana Villalobos (Mariana) · mentor</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="experiencia-estudiante">
+    <span id="student-experience" aria-hidden="true"></span>
+    <div class="wrap section-grid">
+      <div>
+        <div class="eyebrow" data-lang="es">Personas de la semana</div>
+        <div class="eyebrow" data-lang="en">Student and mentor</div>
+        <h2 data-lang="es">Estudiante y mentora</h2>
+        <h2 data-lang="en">Student and mentor</h2>
+      </div>
+
+      <div class="student-experience">
+        <div class="student-meta">
+          <span data-lang="es">Rosa María Leonardo · María Ana Chavana Villalobos (Mariana)</span>
+          <span data-lang="en">Rosa María Leonardo · María Ana Chavana Villalobos (Mariana)</span>
+        </div>
+
+        <div class="profile-pair">
+          <figure class="profile-card">
+            <img
+              class="profile-photo"
+              src="assets/week-01/rosa-maria-leonardo.jpeg"
+              alt="Rosa María Leonardo, estudiante investigadora del VIC 2026."
+              loading="lazy">
+            <figcaption class="profile-copy">
+              <div class="profile-role" data-lang="es">Estudiante investigadora</div>
+              <div class="profile-role" data-lang="en">Student researcher</div>
+              <p class="profile-name">Rosa María Leonardo</p>
+              <p data-lang="es">Participante del VIC 2026</p>
+              <p data-lang="en">VIC 2026 participant</p>
+            </figcaption>
+          </figure>
+
+          <figure class="profile-card">
+            <img
+              class="profile-photo"
+              src="assets/week-01/mariana-chavana.jpeg"
+              alt="María Ana Chavana Villalobos, Mariana, mentora del VIC 2026."
+              loading="lazy">
+            <figcaption class="profile-copy">
+              <div class="profile-role" data-lang="es">Mentora</div>
+              <div class="profile-role" data-lang="en">Mentor</div>
+              <p class="profile-name">María Ana Chavana Villalobos (Mariana)</p>
+              <p data-lang="es">Mentora del VIC 2026</p>
+              <p data-lang="en">VIC 2026 mentor</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <p class="lead" data-lang="es">
+          Esta primera entrega presenta a Rosa María Leonardo, estudiante investigadora, y a María Ana Chavana
+          Villalobos (Mariana), mentora del VIC 2026. Sus perfiles sitúan la reflexión de esta semana sobre
+          planificación, acompañamiento y construcción de una ruta de investigación viable.
+        </p>
+        <p class="lead" data-lang="en">
+          This first report introduces Rosa María Leonardo, a student researcher, and María Ana Chavana
+          Villalobos (Mariana), a VIC 2026 mentor. Their profiles frame this week's reflection on planning,
+          mentoring and the construction of a workable research pathway.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap section-grid">
+      <div>
+        <div class="eyebrow" data-lang="es">Esta semana</div>
+        <div class="eyebrow" data-lang="en">This week</div>
+        <h2 data-lang="es">Empezar por hacer visible el camino</h2>
+        <h2 data-lang="en">Making the pathway visible from the start</h2>
+      </div>
+
+      <div>
+        <p class="lead" data-lang="es">
+          Una de las primeras conversaciones de VIC 2026 puso sobre la mesa un reto muy concreto:
+          el verano ofrece una oportunidad intensa de investigación, pero el tiempo es corto y las estudiantes
+          llegan al programa con circunstancias, responsabilidades y niveles de acceso muy distintos.
+        </p>
+        <p class="lead" data-lang="en">
+          One of the early conversations in VIC 2026 brought a very practical challenge into focus:
+          the programme offers an intensive research opportunity, but time is short and students enter it
+          with different circumstances, responsibilities and levels of access.
+        </p>
+
+        <p data-lang="es">
+          Mariana señaló que algunas participantes combinan el proyecto con trabajo, responsabilidades familiares,
+          traslados desde zonas remotas o acceso irregular a Internet. En ese contexto, una buena mentoría no consiste
+          únicamente en reaccionar a lo que la estudiante trae a cada reunión. También puede requerir una estructura
+          que haga visibles desde el principio los pasos necesarios para llegar a un producto académico terminado.
+        </p>
+        <p data-lang="en">
+          Mariana noted that some participants combine the project with employment, family responsibilities,
+          travel from remote areas or inconsistent internet access. In that context, effective mentoring is not only
+          about responding to whatever a student brings to each meeting. It may also require a structure that makes
+          the steps towards a finished academic output visible from the outset.
+        </p>
+
+        <blockquote class="pullquote">
+          <span data-lang="es">“Más que un <em>nudge</em>, lo que puede hacer falta es andamiaje.”</span>
+          <span data-lang="en">“More than a nudge, what may be needed is scaffolding.”</span>
+          <cite data-lang="es">María Ana Chavana Villalobos (Mariana), mentora del VIC 2026</cite>
+          <cite data-lang="en">María Ana Chavana Villalobos (Mariana), VIC 2026 mentor</cite>
+        </blockquote>
+
+        <p data-lang="es">
+          La distinción es importante. El andamiaje no significa imponer un ritmo idéntico a todas las estudiantes.
+          La mentora describió su planificación como un punto de partida que después debe ajustarse al contacto real
+          con la estudiante: qué tan delimitado está el tema, si existen datos, si todavía deben recopilarse, qué
+          métodos son viables y qué otras limitaciones pueden afectar el proyecto.
+        </p>
+        <p data-lang="en">
+          The distinction matters. Scaffolding does not mean imposing the same pace on every student.
+          The mentor described her plan as a starting point that must then be adapted once she is working with the
+          student: how clearly the topic is defined, whether data already exist, whether they still need to be
+          collected, which methods are feasible and what other constraints may shape the project.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ruta-investigacion">
+    <span id="research-pathway" aria-hidden="true"></span>
+    <div class="wrap section-grid">
+      <div>
+        <div class="eyebrow" data-lang="es">La ruta</div>
+        <div class="eyebrow" data-lang="en">The pathway</div>
+        <h2 data-lang="es">Cinco momentos para llegar al póster</h2>
+        <h2 data-lang="en">Five moments on the way to the poster</h2>
+      </div>
+
+      <div class="milestones">
+        <article class="milestone">
+          <div>
+            <h3 data-lang="es">Delimitar el proyecto</h3>
+            <h3 data-lang="en">Frame the project</h3>
+            <p data-lang="es">
+              Aclarar el tema y el problema, transformar una inquietud amplia en una pregunta investigable
+              y establecer objetivos realistas para el tiempo disponible.
+            </p>
+            <p data-lang="en">
+              Clarify the topic and problem, turn a broad concern into a researchable question and establish
+              objectives that are realistic within the available time.
+            </p>
+          </div>
+        </article>
+
+        <article class="milestone">
+          <div>
+            <h3 data-lang="es">Construir el fundamento</h3>
+            <h3 data-lang="en">Build the foundation</h3>
+            <p data-lang="es">
+              Explorar literatura relevante, identificar debates y seleccionar los conceptos que ayudarán a
+              interpretar el problema de investigación.
+            </p>
+            <p data-lang="en">
+              Explore relevant literature, identify key debates and select the concepts that will help interpret
+              the research problem.
+            </p>
+          </div>
+        </article>
+
+        <article class="milestone">
+          <div>
+            <h3 data-lang="es">Diseñar y reunir evidencia</h3>
+            <h3 data-lang="en">Design and gather evidence</h3>
+            <p data-lang="es">
+              Definir una metodología viable, precisar fuentes o participantes, considerar la ética del estudio
+              y recopilar u organizar la información necesaria.
+            </p>
+            <p data-lang="en">
+              Define a feasible methodology, identify sources or participants, address ethical considerations
+              and collect or organise the information required.
+            </p>
+          </div>
+        </article>
+
+        <article class="milestone">
+          <div>
+            <h3 data-lang="es">Analizar e interpretar</h3>
+            <h3 data-lang="en">Analyse and interpret</h3>
+            <p data-lang="es">
+              Identificar patrones, resultados o categorías y conectarlos con la pregunta de investigación,
+              los objetivos y la literatura.
+            </p>
+            <p data-lang="en">
+              Identify patterns, findings or categories and connect them with the research question,
+              objectives and literature.
+            </p>
+          </div>
+        </article>
+
+        <article class="milestone">
+          <div>
+            <h3 data-lang="es">Comunicar la investigación</h3>
+            <h3 data-lang="en">Communicate the research</h3>
+            <p data-lang="es">
+              Seleccionar la evidencia esencial, construir una narrativa visual y convertir el trabajo realizado
+              en un póster claro que la estudiante pueda presentar, explicar y defender.
+            </p>
+            <p data-lang="en">
+              Select the essential evidence, build a visual narrative and turn the work into a clear poster
+              that the student can present, explain and defend.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap section-grid">
+      <div>
+        <div class="eyebrow" data-lang="es">Mentoría recíproca</div>
+        <div class="eyebrow" data-lang="en">Reciprocal mentoring</div>
+        <h2 data-lang="es">Estructura sin perder flexibilidad</h2>
+        <h2 data-lang="en">Structure without losing flexibility</h2>
+      </div>
+      <div>
+        <p data-lang="es">
+          Pensar la mentoría como una secuencia ayuda a anticipar cuellos de botella: una pregunta demasiado amplia,
+          una búsqueda bibliográfica que se extiende demasiado, datos que no pueden obtenerse a tiempo o un póster
+          que empieza a diseñarse cuando todavía no existe un argumento central. Pero el valor de esa secuencia
+          depende de que se use como andamiaje y no como una lista rígida de tareas.
+        </p>
+        <p data-lang="en">
+          Thinking of mentoring as a sequence helps anticipate bottlenecks: a research question that is too broad,
+          a literature search that expands indefinitely, data that cannot be obtained in time, or a poster designed
+          before a central argument has emerged. But the value of that sequence depends on using it as scaffolding
+          rather than as a rigid checklist.
+        </p>
+
+        <p data-lang="es">
+          Para el VIC, esto conecta con una idea más amplia de mentoría recíproca: la experiencia metodológica del
+          mentor se encuentra con el conocimiento situado de la estudiante. La planificación puede dar estructura;
+          la conversación determina cómo debe adaptarse.
+        </p>
+        <p data-lang="en">
+          For VIC, this connects to a broader idea of reciprocal mentoring: the mentor's methodological experience
+          meets the student's situated knowledge. Planning can provide structure; conversation determines how that
+          structure should be adapted.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <div class="wrap section-grid">
+      <div>
+        <div class="eyebrow" data-lang="es">Vídeo</div>
+        <div class="eyebrow" data-lang="en">Video</div>
+        <h2 data-lang="es">Una ventana al proceso</h2>
+        <h2 data-lang="en">A window into the process</h2>
+      </div>
+      <div>
+        <p data-lang="es">
+          El vídeo acompaña esta entrega semanal y permite incorporar una voz directa al relato del programa.
+          Se reproduce únicamente cuando la persona visitante pulsa el control de reproducción.
+        </p>
+        <p data-lang="en">
+          The video accompanies this weekly report and adds a direct voice to the programme narrative.
+          It plays only when the visitor activates the play control.
+        </p>
+
+        <div class="video-card">
+          <div class="video-frame portrait">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              poster="assets/week-01/MAC-video-poster.jpg"
+              aria-label="Vídeo del VIC 2026, semana 1">
+              <source src="assets/week-01/MAC-video.mp4" type="video/mp4">
+              <span data-lang="es">Tu navegador no admite vídeo HTML5.</span>
+              <span data-lang="en">Your browser does not support HTML5 video.</span>
+            </video>
+          </div>
+          <p class="media-note" data-lang="es">Duración aproximada: 4 min 34 s.</p>
+          <p class="media-note" data-lang="en">Approximate duration: 4 min 34 sec.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap section-grid">
+      <div>
+        <div class="eyebrow" data-lang="es">Desde la organización</div>
+        <div class="eyebrow" data-lang="en">From the organisers</div>
+        <h2 data-lang="es">Un mensaje breve</h2>
+        <h2 data-lang="en">A short message</h2>
+      </div>
+      <div class="organisers">
+        <p data-lang="es">
+          El inicio de cada proyecto también es el momento de hacer explícitas las condiciones que permitirán
+          sostenerlo. En estas primeras semanas queremos que estudiantes y mentores puedan acordar expectativas
+          realistas, identificar los apoyos que necesitan y construir una ruta de trabajo que responda tanto a los
+          objetivos académicos como a las circunstancias concretas de cada proyecto. El VIC no busca imponer una
+          única manera de investigar: busca crear las condiciones para que cada colaboración pueda avanzar con
+          claridad, rigor y reciprocidad.
+        </p>
+        <p data-lang="en">
+          The beginning of each project is also the moment to make explicit the conditions that will help sustain it.
+          In these first weeks, we want students and mentors to agree realistic expectations, identify the support
+          they need and build a pathway that responds both to academic goals and to the specific circumstances of
+          each project. VIC does not seek to impose a single way of doing research: it seeks to create the conditions
+          in which each collaboration can progress with clarity, rigour and reciprocity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow" data-lang="es">Lo que sigue</div>
+      <div class="eyebrow" data-lang="en">What comes next</div>
+      <h2 data-lang="es" style="margin-bottom:24px">De la planificación al avance visible</h2>
+      <h2 data-lang="en" style="margin-bottom:24px">From planning to visible progress</h2>
+
+      <div class="next">
+        <article>
+          <h3 data-lang="es">Claridad</h3>
+          <h3 data-lang="en">Clarity</h3>
+          <p data-lang="es">Convertir temas amplios en preguntas y objetivos que puedan abordarse en el tiempo disponible.</p>
+          <p data-lang="en">Turn broad topics into questions and objectives that can be addressed within the available time.</p>
+        </article>
+        <article>
+          <h3 data-lang="es">Viabilidad</h3>
+          <h3 data-lang="en">Feasibility</h3>
+          <p data-lang="es">Detectar pronto límites de acceso, datos, tiempo, método o conectividad y adaptar el plan.</p>
+          <p data-lang="en">Identify constraints around access, data, time, methods or connectivity early and adapt the plan.</p>
+        </article>
+        <article>
+          <h3 data-lang="es">Evidencia de progreso</h3>
+          <h3 data-lang="en">Evidence of progress</h3>
+          <p data-lang="es">Definir productos intermedios que permitan ver qué se ha logrado y cuál es el siguiente paso.</p>
+          <p data-lang="en">Define intermediate outputs that make clear what has been achieved and what should happen next.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <div class="eyebrow">VIC 2026</div>
+          <h2 data-lang="es">Semana 01</h2>
+          <h2 data-lang="en">Week 01</h2>
+          <p data-lang="es" style="margin-bottom:0">Del tiempo limitado a una ruta de investigación viable.</p>
+          <p data-lang="en" style="margin-bottom:0">From limited time to a workable research pathway.</p>
+        </div>
+        <a class="button primary" href="#content" data-lang="es">Volver al inicio</a>
+        <a class="button primary" href="#content" data-lang="en">Back to top</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Verano Internacional de la Ciencia · VIC 2026</strong><br>
+    REDNACECYT · EAAMO
+  </div>
+</footer>
+
+<script>
+  const body = document.body;
+  const esBtn = document.getElementById('esBtn');
+  const enBtn = document.getElementById('enBtn');
+
+  function setLanguage(lang) {
+    body.classList.toggle('lang-es', lang === 'es');
+    body.classList.toggle('lang-en', lang === 'en');
+    document.documentElement.lang = lang === 'es' ? 'es' : 'en-GB';
+    esBtn.setAttribute('aria-pressed', String(lang === 'es'));
+    enBtn.setAttribute('aria-pressed', String(lang === 'en'));
+    const url = new URL(window.location);
+    url.searchParams.set('lang', lang);
+    history.replaceState({}, '', url);
+  }
+
+  esBtn.addEventListener('click', () => setLanguage('es'));
+  enBtn.addEventListener('click', () => setLanguage('en'));
+
+  const requested = new URLSearchParams(window.location.search).get('lang');
+  if (requested === 'en') setLanguage('en');
+</script>
+</body>
+</html>
