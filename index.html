@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VIC 2026 · Semana 01 | Del tiempo limitado a una ruta de investigación viable</title>
-  <meta name="description" content="Informe semanal del Verano Internacional de la Ciencia 2026: cómo una mentoría estructurada puede ayudar a convertir diez sesiones en una ruta viable hacia un póster académico.">
+  <title>VIC 2026 · Reporte 01 | Del tiempo limitado a una ruta de investigación viable</title>
+  <meta name="description" content="Reporte 1 del Verano Internacional de la Ciencia 2026: cómo una mentoría estructurada puede ayudar a convertir diez sesiones en una ruta viable hacia un póster académico.">
   <meta property="og:title" content="VIC 2026 · Semana 01">
   <meta property="og:description" content="Del tiempo limitado a una ruta de investigación viable: estructura, andamiaje y cinco momentos para acompañar el trabajo de investigación.">
   <meta property="og:type" content="article">
@@ -90,7 +90,7 @@
       color:var(--muted); font-size:.92rem; margin-bottom:18px;
     }
     .profile-pair{
-      display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:24px 0 30px;
+      display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin:24px 0 30px;
     }
     .profile-card{
       margin:0; background:var(--bg); border:1px solid var(--line); border-radius:var(--radius);
@@ -127,6 +127,34 @@
       font-size:clamp(1.25rem,2.5vw,1.8rem); line-height:1.35; border-radius:0 var(--radius) var(--radius) 0;
     }
     .pullquote cite{display:block; font-size:.88rem; font-style:normal; margin-top:14px; color:var(--muted)}
+    .reflection-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:clamp(24px,4vw,38px);
+    }
+    .reflection-card blockquote{
+      margin:0;
+      padding:0;
+      border:0;
+    }
+    .reflection-card p{
+      font-size:1.08rem;
+      line-height:1.75;
+    }
+    .reflection-card p:last-of-type{
+      margin-bottom:0;
+    }
+    .reflection-signature{
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .reflection-signature strong{
+      color:var(--ink);
+    }
     .milestones{display:grid; gap:14px; counter-reset:step}
     .milestone{
       counter-increment:step; display:grid; grid-template-columns:56px 1fr; gap:18px;
@@ -160,6 +188,35 @@
       display:flex; align-items:center; justify-content:space-between; gap:22px; flex-wrap:wrap;
       padding:36px; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
     }
+    .checkpoint-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:clamp(28px,5vw,48px);
+    }
+    .checkpoint-card h2{
+      margin:.12em 0 .55em;
+    }
+    .checkpoint-copy{
+      max-width:900px;
+      font-size:1.08rem;
+    }
+    .checkpoint-copy p{
+      margin-bottom:1.15em;
+    }
+    .checkpoint-list{
+      margin:18px 0 26px;
+      padding-left:1.6rem;
+    }
+    .checkpoint-list li{
+      margin:.65rem 0;
+      padding-left:.2rem;
+    }
+    .checkpoint-actions{
+      margin-top:28px;
+      padding-top:22px;
+      border-top:1px solid var(--line);
+    }
     .social-links{
       display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;
     }
@@ -177,41 +234,7 @@
     span[data-lang]{display:none}
     body.lang-es span[data-lang="es"], body.lang-en span[data-lang="en"]{display:inline}
 
-    .hero-media.hero-portraits{
-      min-height:0;
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:14px;
-      padding:14px;
-      background:var(--surface);
-    }
-    .hero-portrait{
-      min-width:0;
-      overflow:hidden;
-      border-radius:12px;
-      background:#e4e7e3;
-      position:relative;
-    }
-    .hero-portrait img{
-      width:100%;
-      height:min(58vw,560px);
-      min-height:360px;
-      object-fit:cover;
-      object-position:center 24%;
-      display:block;
-    }
-    .hero-portrait figcaption{
-      position:absolute;
-      left:14px;
-      right:14px;
-      bottom:14px;
-      margin:0;
-      padding:9px 12px;
-      border-radius:10px;
-      background:rgba(24,32,29,.82);
-      color:#fff;
-      backdrop-filter:blur(5px);
-    }
+   
     .profile-photo{
       aspect-ratio:4/5;
       object-position:center 22%;
@@ -236,14 +259,15 @@
       outline-offset:3px;
     }
 
+    @media (max-width:1050px){
+      .profile-pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
     @media (max-width:800px){
       .section-grid{grid-template-columns:1fr}
       .media-grid,.next{grid-template-columns:1fr}
       .profile-pair{grid-template-columns:1fr}
       .hero{padding-top:48px}
       .hero-media{min-height:300px}
-      .hero-media.hero-portraits{grid-template-columns:1fr;min-height:0}
-      .hero-portrait img{height:min(118vw,640px);min-height:0}
       .wrap{width:min(var(--max),calc(100% - 28px))}
     }
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -266,8 +290,8 @@
 <main id="content">
   <section class="hero" style="border-top:0">
     <div class="wrap">
-      <div class="eyebrow" data-lang="es">Informe semanal · Semana 01</div>
-      <div class="eyebrow" data-lang="en">Weekly report · Week 01</div>
+      <div class="eyebrow" data-lang="es">Reporte · Reporte 01</div>
+      <div class="eyebrow" data-lang="en">Report · 01</div>
 
       <h1 data-lang="es">Del tiempo limitado a una ruta de investigación viable</h1>
       <h1 data-lang="en">From limited time to a workable research pathway</h1>
@@ -287,37 +311,21 @@
       </div>
 
       <nav class="report-links" aria-label="Report sections">
-        <a href="#experiencia-estudiante" data-lang="es">Estudiante y mentora</a>
-        <a href="#student-experience" data-lang="en">Student and mentor</a>
+        <a href="#experiencia-estudiante" data-lang="es">Estudiante, co-mentora y mentora</a>
+        <a href="#student-experience" data-lang="en">Student, co-mentor and mentor</a>
+        <a href="#reflexion-rosa-maria" data-lang="es">Reflexión de Rosa María</a>
+        <a href="#rosa-maria-reflection" data-lang="en">Rosa María's reflection</a>
+        <a href="#reflexion-yesica" data-lang="es">Reflexión de Yesica</a>
+        <a href="#yesica-reflection" data-lang="en">Yesica's reflection</a>
         <a href="#ruta-investigacion" data-lang="es">Ruta de investigación</a>
         <a href="#research-pathway" data-lang="en">Research pathway</a>
         <a href="#video" data-lang="es">Vídeo</a>
         <a href="#video" data-lang="en">Video</a>
+        <a href="#checkpoint-1" data-lang="es">Revisión de avances 1</a>
+        <a href="#checkpoint-1" data-lang="en">Checkpoint 1</a>
       </nav>
 
-      <div class="hero-media hero-portraits">
-        <figure class="hero-portrait">
-          <img
-            src="assets/week-01/rosa-maria-leonardo.jpeg"
-            alt="Rosa María Leonardo, estudiante investigadora del VIC 2026."
-            loading="eager"
-            fetchpriority="high">
-          <figcaption>
-            <span data-lang="es">Rosa María Leonardo · estudiante investigadora</span>
-            <span data-lang="en">Rosa María Leonardo · student researcher</span>
-          </figcaption>
-        </figure>
-        <figure class="hero-portrait">
-          <img
-            src="assets/week-01/mariana-chavana.jpeg"
-            alt="María Ana Chavana Villalobos, Mariana, mentora del VIC 2026, durante una visita a una abadía histórica."
-            loading="eager">
-          <figcaption>
-            <span data-lang="es">María Ana Chavana Villalobos (Mariana) · mentora</span>
-            <span data-lang="en">María Ana Chavana Villalobos (Mariana) · mentor</span>
-          </figcaption>
-        </figure>
-      </div>
+
     </div>
   </section>
 
@@ -327,15 +335,15 @@
     <div class="wrap section-grid">
       <div>
         <div class="eyebrow" data-lang="es">Personas de la semana</div>
-        <div class="eyebrow" data-lang="en">Student and mentor</div>
-        <h2 data-lang="es">Estudiante y mentora</h2>
-        <h2 data-lang="en">Student and mentor</h2>
+        <div class="eyebrow" data-lang="en">People of the week</div>
+        <h2 data-lang="es">Estudiante, co-mentora y mentora</h2>
+        <h2 data-lang="en">Student, co-mentor and mentor</h2>
       </div>
 
       <div class="student-experience">
         <div class="student-meta">
-          <span data-lang="es">Rosa María Leonardo · María Ana Chavana Villalobos (Mariana)</span>
-          <span data-lang="en">Rosa María Leonardo · María Ana Chavana Villalobos (Mariana)</span>
+          <span data-lang="es">Rosa María Leonardo · Yesica Gómez · María Ana Chavana Villalobos (Mariana)</span>
+          <span data-lang="en">Rosa María Leonardo · Yesica Gómez · María Ana Chavana Villalobos (Mariana)</span>
         </div>
 
         <div class="profile-pair">
@@ -357,6 +365,21 @@
           <figure class="profile-card">
             <img
               class="profile-photo"
+              src="assets/week-01/pic_yesica_gomez.jpeg"
+              alt="Yesica Gómez, co-mentora del VIC 2026."
+              loading="lazy">
+            <figcaption class="profile-copy">
+              <div class="profile-role" data-lang="es">Co-mentora</div>
+              <div class="profile-role" data-lang="en">Co-mentor</div>
+              <p class="profile-name">Yesica Gómez</p>
+              <p data-lang="es">Co-mentora del VIC 2026</p>
+              <p data-lang="en">VIC 2026 co-mentor</p>
+            </figcaption>
+          </figure>
+
+          <figure class="profile-card">
+            <img
+              class="profile-photo"
               src="assets/week-01/mariana-chavana.jpeg"
               alt="María Ana Chavana Villalobos, Mariana, mentora del VIC 2026."
               loading="lazy">
@@ -371,15 +394,100 @@
         </div>
 
         <p class="lead" data-lang="es">
-          Esta primera entrega presenta a Rosa María Leonardo, estudiante investigadora, y a María Ana Chavana
-          Villalobos (Mariana), mentora del VIC 2026. Sus perfiles sitúan la reflexión de esta semana sobre
-          planificación, acompañamiento y construcción de una ruta de investigación viable.
+          Esta primera entrega presenta a Rosa María Leonardo, estudiante investigadora; a Yesica Gómez,
+          co-mentora; y a María Ana Chavana Villalobos (Mariana), mentora del VIC 2026. Sus experiencias
+          sitúan la reflexión de esta semana sobre planificación, acompañamiento, aprendizaje compartido
+          y construcción de una ruta de investigación viable.
         </p>
         <p class="lead" data-lang="en">
-          This first report introduces Rosa María Leonardo, a student researcher, and María Ana Chavana
-          Villalobos (Mariana), a VIC 2026 mentor. Their profiles frame this week's reflection on planning,
-          mentoring and the construction of a workable research pathway.
+          This first report introduces Rosa María Leonardo, a student researcher; Yesica Gómez, a co-mentor;
+          and María Ana Chavana Villalobos (Mariana), a VIC 2026 mentor. Their experiences frame this week's
+          reflection on planning, mentoring, shared learning and the construction of a workable research pathway.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reflexion-rosa-maria">
+    <span id="rosa-maria-reflection" aria-hidden="true"></span>
+    <div class="wrap section-grid">
+      <div>
+        <div class="eyebrow" data-lang="es">La voz de las estudiantes</div>
+        <div class="eyebrow" data-lang="en">The voice of the students</div>
+        <h2 data-lang="es">Reflexión de Rosa María</h2>
+        <h2 data-lang="en">Rosa María's reflection</h2>
+      </div>
+
+      <div class="reflection-card">
+        <blockquote data-lang="es">
+          <p>Hola, buenos días. Mi nombre es Rosa María Leonardo.</p>
+
+          <p>Me da muchísimo gusto y agradezco profundamente la oportunidad de haber sido aceptada en el Verano Internacional de la Ciencia 2026. Formar parte de este programa representa una experiencia inestimable para mi desarrollo académico y profesional.</p>
+
+          <p>Mis primeras impresiones son verdaderamente excelentes; me llena de entusiasmo integrarme a un espacio donde se impulsa el rigor científico, el intercambio cultural y el aprendizaje colaborativo.</p>
+
+          <p>Esta primera semana de trabajo ha sido sumamente provechosa. La reunión que hemos sostenido con mi mentora nos ha permitido establecer un rumbo claro, definir objetivos sólidos y comenzar a estructurar las actividades de investigación con paso firme.</p>
+
+          <p>Estoy muy emocionada por todo lo que compartiremos y aprenderemos a lo largo de este proceso, y tengo la certeza de que esta estancia será un periodo de gran crecimiento y aportaciones significativas.</p>
+        </blockquote>
+
+        <blockquote data-lang="en">
+          <p>Hello, good morning. My name is Rosa María Leonardo.</p>
+
+          <p>I am delighted and deeply grateful for the opportunity to have been accepted into the Verano Internacional de la Ciencia 2026. Being part of this programme represents an invaluable experience for my academic and professional development.</p>
+
+          <p>My first impressions have been truly excellent. I am very enthusiastic about joining a space that promotes scientific rigour, cultural exchange and collaborative learning.</p>
+
+          <p>This first week of work has been extremely productive. The meeting I have had with my mentor has allowed us to establish a clear direction, define solid objectives and begin structuring the research activities on a firm footing.</p>
+
+          <p>I am very excited about everything we will share and learn throughout this process, and I am certain that this placement will be a period of significant growth and meaningful contributions.</p>
+        </blockquote>
+
+        <div class="reflection-signature">
+          <strong>Rosa María Leonardo</strong><br>
+          <span data-lang="es">Estudiante investigadora · VIC 2026</span>
+          <span data-lang="en">Student researcher · VIC 2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reflexion-yesica">
+    <span id="yesica-reflection" aria-hidden="true"></span>
+    <div class="wrap section-grid">
+      <div>
+        <div class="eyebrow" data-lang="es">La voz de las co-mentoras</div>
+        <div class="eyebrow" data-lang="en">The voice of co-mentors</div>
+        <h2 data-lang="es">Reflexión de Yesica</h2>
+        <h2 data-lang="en">Yesica's reflection</h2>
+      </div>
+
+      <div class="reflection-card">
+        <blockquote data-lang="es">
+          <p>Participar este año como co-mentora en el Verano Internacional de la Ciencia representa para mí una experiencia sumamente significativa, pues me permite regresar a un espacio que ha sido importante en mi formación tanto académica como personal. En años anteriores tuve la oportunidad de participar en dos ocasiones como estudiante, experiencias que contribuyeron a fortalecer mi trayectoria académica y me permitieron descubrir nuevas posibilidades a través del acompañamiento, el intercambio de conocimientos y la construcción de redes.</p>
+
+          <p>Hoy, asumir el papel de co-mentora me permite reconocer el valor de estas experiencias desde otro lugar. Tengo la oportunidad de acompañar a una estudiante en su proceso, pero también de continuar aprendiendo. La mentoría es un ejercicio de aprendizaje compartido, en el que encuentro enseñanzas tanto en la experiencia y conocimientos de la mentora principal como en las preguntas, ideas y perspectivas de la estudiante.</p>
+
+          <p>Para mí, participar en este programa es también una forma de agradecer las oportunidades y el apoyo que he recibido a lo largo de mi participación. Creo que una de las maneras más significativas de corresponder a quienes han contribuido a nuestro crecimiento es abrir camino para otras personas.</p>
+
+          <p>Por ello, considero fundamental que las redes de apoyo académico se fortalezcan y crezcan. Pasar de ser estudiante a ser mentora simboliza para mí la continuidad de una cadena de acompañamiento y colaboración que hace posible que más jóvenes encuentren en la ciencia un espacio para desarrollar sus capacidades y construir su propio camino.</p>
+        </blockquote>
+
+        <blockquote data-lang="en">
+          <p>Taking part this year as a co-mentor in the Verano Internacional de la Ciencia is an especially meaningful experience for me, as it allows me to return to a space that has been important in both my academic and personal development. In previous years, I had the opportunity to participate twice as a student. Those experiences strengthened my academic trajectory and allowed me to discover new possibilities through mentoring, knowledge exchange and the building of networks.</p>
+
+          <p>Taking on the role of co-mentor now allows me to recognise the value of these experiences from a different perspective. I have the opportunity to accompany a student through her process, while continuing to learn myself. Mentoring is an exercise in shared learning, in which I draw lessons both from the experience and knowledge of the lead mentor and from the student's questions, ideas and perspectives.</p>
+
+          <p>For me, participating in this programme is also a way of expressing gratitude for the opportunities and support I have received throughout my involvement. I believe that one of the most meaningful ways to give back to those who have contributed to our growth is to help open pathways for others.</p>
+
+          <p>For this reason, I believe it is essential for academic support networks to be strengthened and expanded. Moving from being a student to becoming a mentor symbolises, for me, the continuation of a chain of support and collaboration that makes it possible for more young people to find in science a space where they can develop their abilities and build their own path.</p>
+        </blockquote>
+
+        <div class="reflection-signature">
+          <strong>Yesica Gómez</strong><br>
+          <span data-lang="es">Co-mentora · VIC 2026</span>
+          <span data-lang="en">Co-mentor · VIC 2026</span>
+        </div>
       </div>
     </div>
   </section>
@@ -387,9 +495,9 @@
   <section>
     <div class="wrap section-grid">
       <div>
-        <div class="eyebrow" data-lang="es">Esta semana</div>
-        <div class="eyebrow" data-lang="en">This week</div>
-        <h2 data-lang="es">Empezar por hacer visible el camino</h2>
+        <div class="eyebrow" data-lang="es">Nuestros mentores comparten</div>
+        <div class="eyebrow" data-lang="en">Our mentors share</div>
+        <h2 data-lang="es">Hay que empezar por hacer visible el camino</h2>
         <h2 data-lang="en">Making the pathway visible from the start</h2>
       </div>
 
@@ -408,7 +516,7 @@
         <p data-lang="es">
           Mariana señaló que algunas participantes combinan el proyecto con trabajo, responsabilidades familiares,
           traslados desde zonas remotas o acceso irregular a Internet. En ese contexto, una buena mentoría no consiste
-          únicamente en reaccionar a lo que la estudiante trae a cada reunión. También puede requerir una estructura
+          únicamente en reaccionar a lo que la estudiante trae a cada reunión, también puede requerir una estructura
           que haga visibles desde el principio los pasos necesarios para llegar a un producto académico terminado.
         </p>
         <p data-lang="en">
@@ -419,21 +527,23 @@
         </p>
 
         <blockquote class="pullquote">
-          <span data-lang="es">“Más que un <em>nudge</em>, lo que puede hacer falta es andamiaje.”</span>
-          <span data-lang="en">“More than a nudge, what may be needed is scaffolding.”</span>
+          <span data-lang="es">“Más que un <em>empujón (nudge)</em>, lo que construye es un andamiaje.”</span>
+          <span data-lang="en">“More than a nudge, what is needed is scaffolding.”</span>
           <cite data-lang="es">María Ana Chavana Villalobos (Mariana), mentora del VIC 2026</cite>
           <cite data-lang="en">María Ana Chavana Villalobos (Mariana), VIC 2026 mentor</cite>
         </blockquote>
 
         <p data-lang="es">
-          La distinción es importante. El andamiaje no significa imponer un ritmo idéntico a todas las estudiantes.
-          La mentora describió su planificación como un punto de partida que después debe ajustarse al contacto real
+          La distinción es importante. El andamiaje no significa imponer un ritmo idéntico a todas las estudiantes, 
+          significa apoyar a la estudiante de manera estructurada para desarrollar la autonomía y aprender una habilidad compleja.
+          Mariana describió su planificación como un punto de partida que después debe ajustarse al contacto real
           con la estudiante: qué tan delimitado está el tema, si existen datos, si todavía deben recopilarse, qué
           métodos son viables y qué otras limitaciones pueden afectar el proyecto.
         </p>
         <p data-lang="en">
-          The distinction matters. Scaffolding does not mean imposing the same pace on every student.
-          The mentor described her plan as a starting point that must then be adapted once she is working with the
+          The distinction matters. Scaffolding does not mean imposing the same pace on every student. It means providing structured support that allows students
+          to develop autonomy and complex skills.
+          Mariana described her plan as a starting point that must then be adapted once she is working with the
           student: how clearly the topic is defined, whether data already exist, whether they still need to be
           collected, which methods are feasible and what other constraints may shape the project.
         </p>
@@ -487,7 +597,7 @@
             <h3 data-lang="es">Diseñar y reunir evidencia</h3>
             <h3 data-lang="en">Design and gather evidence</h3>
             <p data-lang="es">
-              Definir una metodología viable, precisar fuentes o participantes, considerar la ética del estudio
+              Definir una metodología viable, precisar fuentes o participantes, considerar los aspectos éticos del estudio
               y recopilar u organizar la información necesaria.
             </p>
             <p data-lang="en">
@@ -576,12 +686,10 @@
       </div>
       <div>
         <p data-lang="es">
-          El vídeo acompaña esta entrega semanal y permite incorporar una voz directa al relato del programa.
-          Se reproduce únicamente cuando la persona visitante pulsa el control de reproducción.
+          En este vídeo Mariana comparte algunos puntos que ella considera relevantes al inicio de las mentorías.
         </p>
         <p data-lang="en">
-          The video accompanies this weekly report and adds a direct voice to the programme narrative.
-          It plays only when the visitor activates the play control.
+          In this video Mariana shares some highlights regarding the start of the mentoring process.
         </p>
 
         <div class="video-card">
@@ -597,8 +705,6 @@
               <span data-lang="en">Your browser does not support HTML5 video.</span>
             </video>
           </div>
-          <p class="media-note" data-lang="es">Duración aproximada: 4 min 34 s.</p>
-          <p class="media-note" data-lang="en">Approximate duration: 4 min 34 sec.</p>
         </div>
       </div>
     </div>
@@ -662,18 +768,73 @@
     </div>
   </section>
 
-  <section>
+  <section id="checkpoint-1">
     <div class="wrap">
-      <div class="cta">
-        <div>
-          <div class="eyebrow">VIC 2026</div>
-          <h2 data-lang="es">Semana 01</h2>
-          <h2 data-lang="en">Week 01</h2>
-          <p data-lang="es" style="margin-bottom:0">Del tiempo limitado a una ruta de investigación viable.</p>
-          <p data-lang="en" style="margin-bottom:0">From limited time to a workable research pathway.</p>
+      <div class="checkpoint-card">
+        <div class="eyebrow">VIC 2026</div>
+        <h2 data-lang="es">Revisión de avances 1</h2>
+        <h2 data-lang="en">Checkpoint 1</h2>
+
+        <div class="checkpoint-copy" data-lang="es">
+          <p>
+            Hola a todas y todos. Estamos muy contentos por el arranque de la edición 2026 del
+            Verano Internacional de la Ciencia. Tenemos proyectos muy interesantes y excelentes
+            estudiantes que han empezado a trabajar en sus proyectos con mucho entusiasmo, con la
+            colaboración de mentoras y mentores que participan con una vocación y energía admirables.
+          </p>
+
+          <p>En esta primera etapa contemplamos que las siguientes áreas deben haberse abordado:</p>
+
+          <ol class="checkpoint-list">
+            <li>Trabajar la pregunta de investigación y redefinirla si es necesario.</li>
+            <li>Discutir el método de investigación que se utilizará para el proyecto.</li>
+            <li>Definir qué metodologías son relevantes para la recolección de información.</li>
+          </ol>
+
+          <p>
+            Cada proyecto empieza de manera distinta, avanza a diferentes velocidades y pasa por
+            ciclos distintos en diferentes etapas, pero el objetivo principal y la fecha de conclusión
+            no cambian.
+          </p>
+
+          <p>
+            Recuerden que estamos disponibles a través de los medios de comunicación que les hemos
+            compartido para cualquier comentario o pregunta.
+          </p>
         </div>
-        <a class="button primary" href="#content" data-lang="es">Volver al inicio</a>
-        <a class="button primary" href="#content" data-lang="en">Back to top</a>
+
+        <div class="checkpoint-copy" data-lang="en">
+          <p>
+            Hello everyone. We are very pleased with the start of the 2026 edition of the
+            Verano Internacional de la Ciencia. We have very interesting projects and excellent
+            students who have begun working on them with great enthusiasm, supported by mentors
+            whose commitment and energy are admirable.
+          </p>
+
+          <p>At this first stage, we expect the following areas to have been addressed:</p>
+
+          <ol class="checkpoint-list">
+            <li>Work on the research question and redefine it if necessary.</li>
+            <li>Discuss the research method that will be used for the project.</li>
+            <li>Define which methodologies are relevant for collecting information.</li>
+          </ol>
+
+          <p>
+            Every project starts from a different point, progresses at a different pace and moves
+            through different cycles at different stages, but the main objective and the completion
+            date do not change.
+          </p>
+
+          <p>
+            Please remember that we are available through the communication channels we have shared
+            with you for any comments or questions.
+          </p>
+        </div>
+
+        <div class="checkpoint-actions">
+          <a class="button primary" href="#content" data-lang="es">Volver al inicio</a>
+          <a class="button primary" href="#content" data-lang="en">Back to top</a>
+        </div>
       </div>
     </div>
   </section>
